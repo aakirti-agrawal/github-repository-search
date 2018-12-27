@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            #myDIV {
+                border: 1px solid grey;
+                margin-top: 50px;
+                padding: 10px;
+                max-height: 350px; 
+                max-width: 400px; 
+                overflow: auto; 
+                box-shadow: 0px 30px 40px #bcbbf0;
+                color: white;
+                background-color: rgb(32, 32, 32);
+            }
+        </style>
+        <title>Github Repo Search</title>
+        
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre.css">
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre.min.css">
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre-exp.min.css">
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre-exp.css">
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre-icons.min.css">
+            <link rel="stylesheet" href="./spectre-0.5.8/dist/spectre-icons.css">
+    </head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+        <!-- <div style="background-color:rgb(32, 32, 32); height: 80px;"> -->
+        <div style="background-color:rgb(32, 32, 32); height: 80px;">
+            <figure style="float:left; margin: 10px 0px 0px 10px;" class="avatar avatar-xl">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="...">
+            </figure>
+            <span style="float: left; margin-left: 18px; margin-top: 8px;"><h1 class="text-center pt-2" style="color: silver;">Github Repository Search</h1></span>
+        </div>
+
+        <div class="form-group" style="margin-top: 40px;">
+            <div class="p-centered" style="width:25%;">
+                <label style="font-size: 20px;" class="form-label" for="Repo-Name">Enter Repository Name</label>
+                <input class="form-input" type="text" id="Repo-Name" placeholder="Repository Name" onkeyup="getRepo(this.value)">
+            </div>
+        </div>
+        <div class="p-centered" id="myDIV">
+            <i>Your results will be displayed here</i>
+        </div>
+                
+    </body>
+    <script type="text/javascript" src="implement.js"></script>  
+  </html>
+
+  <!-- <input id="txt1" type="text" onchange="SetDefault($(this).val());" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"> -->
