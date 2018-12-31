@@ -1,7 +1,7 @@
 function getRepo(data) {
     if(document.getElementById("Repo-Name").value.length == 0)
     {
-        document.getElementById("myDIV").innerHTML = "Your results will be displayed here.";
+        document.getElementById("myDIV").innerHTML = "<i>Your results will be displayed here.</i>";
         return;
     }
 
