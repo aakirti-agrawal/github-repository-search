@@ -1,10 +1,11 @@
 function getRepo(data) {
+    
     if(document.getElementById("Repo-Name").value.length == 0)
     {
         document.getElementById("myDIV").innerHTML = "<i>Your results will be displayed here.</i>";
         return;
     }
-
+    
     var search_url = 'https://api.github.com/search/repositories?q='+data;
     $.ajax({
         method: "GET",
@@ -19,6 +20,8 @@ function getRepo(data) {
         console.log(err);
         document.getElementById("myDIV").innerHTML = "One of the following error exists:<br> 1.API calls limit exceeded. Please try again after sometime.<br>OR<br>2.Your internet connection is lost. Please connect to internet and try again."
     });
+    
+    IsEmpty();
 };
 
 function DisplayResult(resultset) {
@@ -40,3 +43,11 @@ function DisplayResult(resultset) {
         mydiv.appendChild(brTag);
     }
 };
+
+function IsEmpty(){ 
+    if(document.getElementById("Repo-Name").value.length == 0)
+    {
+        document.getElementById("myDIV").innerHTML = "<i>Your results will be displayed here.</i>";
+        return;
+    }
+}
